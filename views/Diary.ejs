@@ -1,0 +1,18 @@
+<%- include('./layout/Header') %>
+<%- include('./layout/Navbar') %>
+    <div class="container">
+        <div class="col mb-4 mx-3">
+            <a href="/add" class="btn btn-primary">Add to Diary</a>
+        </div>
+        <div style="color:black"class="container-fluid mb-3 mt-2 flex-row">
+            <% data.forEach((diary) =>{%>
+                <div class="card container-lg mb-4 p-2">
+                    <h3 class="card-title"><%= diary.title%></h3>
+                    <p class="card-body"><%= diary.description %></p>
+                    <p class="card-text"><%= diary.date %></p>
+                </div>
+            <%}) %>
+        </div>
+    </div>
+    
+<%- include('./layout/Footer') %>
